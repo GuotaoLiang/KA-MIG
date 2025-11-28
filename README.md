@@ -10,7 +10,7 @@ Masked image generation (MIG) has demonstrated remarkable efficiency and high-fi
 
 ![model.png](assets/model.png)
 
-![generation_images.png](assets/generation_images.png)
+![generation_images.png](assets/generation_images.jpg)
 
 ## Installation
 We support PyTorch==2.0.1 and torchvision==0.15.2. Please install them following the official instructions.
