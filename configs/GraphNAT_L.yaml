@@ -1,0 +1,40 @@
+train:
+  n_steps: 1500
+  batch_size: 300               # 1600
+  log_interval: 100
+  save_interval: 100
+  fine_tuning: True
+  train_head: True
+  pretrain: "assets/nnet_ema.pth"
+  cal_fid_interval: 100
+optimizer:
+  name: 'adamw'
+  lr: 0.0001
+  weight_decay: 0.000
+  betas: [0.99, 0.99]
+lr_scheduler:
+  name: 'customized'
+  warmup_steps: 300
+nnet:
+  img_size: 16
+  codebook_size: 1024
+  embed_dim: 768
+  depth: 24
+  num_heads: 8
+  mlp_ratio: 4
+  qkv_bias: False
+  num_classes: 1001
+  use_checkpoint: False
+  skip: True
+  co_occurrence_graph_path: 'graph_prior/codebook_co_occurrence_norm_self_50.pkl'
+  replace_graph_path: 'graph_prior/codebook_replace_graph_norm_self.pkl'
+  position_negative_codebook_graph_path: 'graph_prior/class_pos_norm_mat_cat.pkl'
+  gnn: 'gcn' # or 'gat'
+muse:
+  ignore_ind: -1
+  smoothing: 0.1
+dataset:
+  name: 'imagenet256_features'
+  path: 'assets/imagenet256_vq_features'
+  cfg: True
+  p_uncond: 0.15
