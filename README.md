@@ -57,7 +57,7 @@ Download the pre-trained backbone model, namely AutoNAT-L, from [this link](http
 Download our pre-trained KA-MIG model from [this link](https://drive.google.com/file/d/1jBJIappmKaeJ2QB51h8u78Ghpelh5snm/view?usp=sharing) and put it in `assets/graph_nnet_ema.pth`.
 
 ### Graph Prior Knowledge
-Download the class_pos_graph from [this link](graph...) and put it in `graph_prior/`.
+Download the class_pos_graph from [this link](https://drive.google.com/file/d/15L_DomhWjPrHRAlyw4lpfxWB1Xh7a18-/view?usp=sharing) and put it in `graph_prior/`.
 
 We also provide `train_img_50K_token.pkl` which contains 50K images sampled from ImageNet for constructing the co-occurrence graph and the semantic similarity graph. The code for constructing these two graphs is provided in the `graph_construction/` directory.
 
@@ -93,7 +93,7 @@ export CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7
 torchrun --nproc_per_node=8 --rdzv_backend=c10d --rdzv_endpoint=localhost:0 generate_npz.py
 ```
 
-We also provide 50K generated images for FID evaluation. You can download them from [this link](https://drive.google.com/file/d/1jBJIappmKaeJ2QB51h8u78Ghpelh5snm/view?usp=sharing).
+We also provide 50K generated images for FID evaluation. You can download them from [this link](https://drive.google.com/file/d/19-Ut2gRN_35UtpWUe0Gln3_o4v5LoUAR/view?usp=sharing).
 
 ## Citation
 
